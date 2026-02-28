@@ -327,7 +327,7 @@ function PaymentModal({ isOpen, onClose, tierName, price }) {
 
         {step === "choose" ? (
           <div className="modal-cols" style={{ display:"flex",maxHeight:"60vh" }}>
-            <div className="modal-left" style={{ padding:40,background:"rgba(17,24,39,0.4)",flex:"0 0 42%",borderRight:"1px solid #374151",display:"flex",flexDirection:"column",justifyContent:"space-between" }}>
+            <div className="modal-left" style={{ padding:40,background:"rgba(17,24,39,0.4)",flex:"0 0 42%",borderRight:"1px solid #374151",display:"flex",flexDirection:"column",justifyContent:"space-between",overflowY:"auto" }}>
               <div>
                 <h4 style={{ color:"#fff",fontSize:11,letterSpacing:"0.2em",marginBottom:24,display:"flex",alignItems:"center",gap:10 }}><Icon.Zap size={18} /> Select Payment Method</h4>
                 <button className="revolut-btn" onClick={() => window.open(revolutLink(price, tierName), "_blank")} style={{ width:"100%",padding:"18px 20px",marginBottom:10,background:"linear-gradient(135deg, #191c84 0%, #4156f6 100%)",border:"none",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"space-between",transition:"opacity .2s" }}>
@@ -336,6 +336,17 @@ function PaymentModal({ isOpen, onClose, tierName, price }) {
                     <div style={{ textAlign:"left" }}>
                       <div style={{ color:"#fff",fontSize:13,letterSpacing:"0.05em" }}>Pay with Revolut</div>
                       <div style={{ color:"rgba(255,255,255,0.45)",fontSize:9,letterSpacing:"0.15em",marginTop:3 }}>Opens Revolut app instantly</div>
+                    </div>
+                  </div>
+                  <div style={{ color:"#fff",display:"flex",alignItems:"center",gap:8,fontSize:13 }}>€{price} <Icon.ArrowRight size={18} /></div>
+                </button>
+
+                <button className="revolut-btn" onClick={() => window.open("https://nikit3d.lemonsqueezy.com/checkout/buy/84875633-61ea-4bbd-98b9-40ea7587a1f1", "_blank")} style={{ width:"100%",padding:"18px 20px",marginBottom:10,background:"linear-gradient(135deg, #3d1f00 0%, #e67e22 100%)",border:"none",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"space-between",transition:"opacity .2s" }}>
+                  <div style={{ display:"flex",alignItems:"center",gap:14 }}>
+                    <div style={{ width:42,height:42,borderRadius:"50%",background:"rgba(255,255,255,0.15)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:20 }}>🍋</div>
+                    <div style={{ textAlign:"left" }}>
+                      <div style={{ color:"#fff",fontSize:13,letterSpacing:"0.05em" }}>Pay with Card</div>
+                      <div style={{ color:"rgba(255,255,255,0.45)",fontSize:9,letterSpacing:"0.15em",marginTop:3 }}>Visa / Mastercard via LemonSqueezy</div>
                     </div>
                   </div>
                   <div style={{ color:"#fff",display:"flex",alignItems:"center",gap:8,fontSize:13 }}>€{price} <Icon.ArrowRight size={18} /></div>
@@ -353,15 +364,15 @@ function PaymentModal({ isOpen, onClose, tierName, price }) {
               </div>
               <div style={{ marginTop:12,padding:"14px 18px",background:"rgba(5,46,22,0.15)",border:"1px solid rgba(34,197,94,0.2)" }}>
                 <Icon.Shield size={22} />
-                <p style={{ fontSize:9,color:"#22c55e",letterSpacing:"0.1em",lineHeight:1.9,marginTop:10 }}>Secure SSL Connection. Payments are processed via Revolut Bank UAB.</p>
+                <p style={{ fontSize:9,color:"#9ca3af",letterSpacing:"0.04em",lineHeight:1.8,marginTop:10,wordBreak:"break-word",overflowWrap:"break-word" }}>By purchasing this course, you agree that the materials are licensed for personal use only. Any unauthorized distribution, resale, or sharing of access is strictly prohibited and may result in appropriate legal action.</p>
               </div>
             </div>
             <div style={{ padding:40,flex:1,display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",textAlign:"center" }}>
               <div style={{ fontSize:56,marginBottom:16 }}>⚡</div>
               <h4 style={{ color:"#fff",fontSize:18,letterSpacing:"-0.02em",marginBottom:12 }}>Instant Activation</h4>
-              <p style={{ color:"#6b7280",fontSize:10,letterSpacing:"0.15em",lineHeight:2,maxWidth:280 }}>Choose Revolut for instant payment. Course access is activated automatically after payment is confirmed.</p>
+              <p style={{ color:"#6b7280",fontSize:10,letterSpacing:"0.15em",lineHeight:2,maxWidth:280 }}>Pay instantly via Revolut or use a credit/debit card through our secure LemonSqueezy checkout.</p>
               <div style={{ marginTop:32,padding:"14px 24px",background:"rgba(6,182,212,0.05)",border:"1px solid rgba(6,182,212,0.15)" }}>
-                <p style={{ fontSize:10,color:"#06b6d4",letterSpacing:"0.15em" }}>🔒 revolut.me/{REVOLUT_USER}</p>
+                <p style={{ fontSize:10,color:"#06b6d4",letterSpacing:"0.15em" }}>🔒 Visa · Mastercard · Revolut</p>
               </div>
             </div>
           </div>
@@ -379,7 +390,7 @@ function PaymentModal({ isOpen, onClose, tierName, price }) {
               </div>
               <div style={{ padding:"16px 18px",background:"rgba(5,46,22,0.15)",border:"1px solid rgba(34,197,94,0.2)" }}>
                 <Icon.Shield size={22} />
-                <p style={{ fontSize:9,color:"#22c55e",letterSpacing:"0.1em",lineHeight:1.9,marginTop:10 }}>Secure SSL Connection. Payments are processed automatically via Revolut Bank UAB.</p>
+                <p style={{ fontSize:9,color:"#9ca3af",letterSpacing:"0.04em",lineHeight:1.8,marginTop:10,wordBreak:"break-word",overflowWrap:"break-word" }}>By purchasing this course, you agree that the materials are licensed for personal use only. Any unauthorized distribution, resale, or sharing of access is strictly prohibited and may result in appropriate legal action.</p>
               </div>
             </div>
             <div style={{ padding:40,flex:1,overflowY:"auto" }}>
